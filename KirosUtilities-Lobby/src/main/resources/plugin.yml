@@ -1,5 +1,5 @@
 name: KirosUtilities
-version: Lobby-2.0
+version: Lobby-2.1
 main: com.sagmcu.KirosUtilities.Main
 api-version: 1.13
 softdepend: [ProtocolLib]
@@ -62,3 +62,4 @@ permissions:
   kirosutilities.fly.persist:
     description: Allows flight mode to persist across server joins
     default: op
+
