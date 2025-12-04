@@ -1,4 +1,4 @@
-# KirosUtilities plugin config - Lobby-2.0
+# KirosUtilities plugin config - Lobby-2.1
 # Mensajes
 messages:
 # Mensajes generales del plugin.
@@ -17,6 +17,8 @@ messages:
   spawnlist_entry: "&7&l  - &b{spawn}"
   spawnlist_empty: "&cNo hay spawns disponibles en estos momentos."
   spawnlist_no_permission: "&cNo tienes permisos para ver la lista de spawns."
+  teleport_wait: "&7[&6&l!&r&7] Teletransportando en &b{seconds} &7segundos. Por favor, no te muevas."
+  teleport_canceled: "&7[&6&l!&r&7] &cEl teletransporte ha sido cancelado porque te has movido o has recibido daño."
 # Sección Fly.
 # Permisos: kirosutilities.fly - para usar "/fly", kirosutilities.fly.others - para poder usar "/fly <jugador>"
 # kirosutilities.fly.persist - para mantener el fly al salir/entrar del servidor.
@@ -93,7 +95,8 @@ TabCompletionFilter:
 # Otros permisos pueden ser añadidos a la hora de establecer un spawn nuevo con la flag "--permission <permiso>"
 spawn:
   enabled: true # Si se pone en "false" toda la mecánica de spawns se desactiva.
-  spawn_on_join: true # Fuerza a que los jugadores aparezcan en el spawn "Default" cuando se unen al servidor.
+  spawn_on_join: false # Fuerza a que los jugadores aparezcan en el spawn "Default" cuando se unen al servidor.
   first_spawn: "Default" # Fuerza el spawn en el spawn especificado a los jugadores que se unen por 1a vez al servidor.
+  spawn_wait_time: 5  # Tiempo de espera para teletransportarse a un spawn, especificado en segundos, los jugadores con el permiso "kirosutilities.bypass.wait" no tienen que esperar.
    
 # Fin de la config.
