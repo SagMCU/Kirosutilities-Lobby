@@ -5,7 +5,7 @@
 
     <groupId>com.sagmcu</groupId>
     <artifactId>KirosUtilities</artifactId>
-    <version>Lobby-2.0</version>
+    <version>Lobby-2.1</version>
     <packaging>jar</packaging>
 
     <name>KirosUtilities</name>
@@ -80,4 +80,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
