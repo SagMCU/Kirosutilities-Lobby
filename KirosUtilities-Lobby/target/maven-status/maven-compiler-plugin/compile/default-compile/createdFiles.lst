@@ -1,0 +1,16 @@
+com\sagmcu\KirosUtilities\Main.class
+com\sagmcu\KirosUtilities\filters\TabCompletionFilter.class
+com\sagmcu\KirosUtilities\commands\ReloadCommand.class
+com\sagmcu\KirosUtilities\filters\LegacyTabCompletionFilter.class
+com\sagmcu\KirosUtilities\handlers\JoinFullServers.class
+com\sagmcu\KirosUtilities\utils\ChatColorTranslator$LegacyColor.class
+com\sagmcu\KirosUtilities\utils\ChatColorTranslator.class
+com\sagmcu\KirosUtilities\commands\SpawnCommand.class
+com\sagmcu\KirosUtilities\filters\TabCompletionFilter$1.class
+com\sagmcu\KirosUtilities\commands\SetSpawnCommand.class
+com\sagmcu\KirosUtilities\handlers\PlayerJoinListener.class
+com\sagmcu\KirosUtilities\commands\FlyCommand.class
+com\sagmcu\KirosUtilities\filters\LegacyTabCompletionFilter$CustomWhitelist.class
+com\sagmcu\KirosUtilities\filters\TabCompletionFilter$CustomWhitelist.class
+com\sagmcu\KirosUtilities\filters\LegacyTabCompletionFilter$1.class
+com\sagmcu\KirosUtilities\commands\SpawnListCommand.class

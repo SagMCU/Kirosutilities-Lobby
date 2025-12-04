@@ -1,0 +1,99 @@
+# KirosUtilities plugin config - Lobby-2.0
+# Mensajes
+messages:
+# Mensajes generales del plugin.
+  reload_success: "&eLa configuración de &dKirosUtilities &ese ha recargado con &aéxito&e."
+  no_permission: "&cNo tienes permisos para ejecutar ese comando."
+# Sección spawns.
+  spawn_success: "&7[&6&l!&r&7] Has sido teletransportado al spawn &b{spawn} &7correctamente."
+  default_spawn_success: "&7[&6&l!&r&7] Teletransportado al &bspawn"
+  spawn_others_success: "&7[&6&l!&r&7] &aHas teletransportado a &d{player} &aal spawn &b{spawn} &acorrectamente."
+  spawn_others_received: "&7[&6&l!&r&7] &d{player} &7te ha teletransportado al spawn &b{spawn}&7."
+  spawn_invalid: "&cEl spawn &b{spawn} &cno existe o no tienes permisos."
+  setspawn_success: "&7[&6&l!&r&7] &aEl spawn &b{spawn} &aha sido establecido correctamente."
+  setspawn_invalid_args: "&cArgumentos inválidos &bUso: /setspawn [--name <nombre>] [--permission <permiso>]"
+  setspawn_console: "&cEste comando no se puede ejecutar desde la consola :("
+  spawnlist_header: "&6&l---| &aSpawns Disponibles&6&l |---"
+  spawnlist_entry: "&7&l  - &b{spawn}"
+  spawnlist_empty: "&cNo hay spawns disponibles en estos momentos."
+  spawnlist_no_permission: "&cNo tienes permisos para ver la lista de spawns."
+# Sección Fly.
+# Permisos: kirosutilities.fly - para usar "/fly", kirosutilities.fly.others - para poder usar "/fly <jugador>"
+# kirosutilities.fly.persist - para mantener el fly al salir/entrar del servidor.
+  fly_enabled: "&7[&6&l!&r&7] Has &aactivado &7el fly. &d:D"
+  fly_disabled: "&7[&6&l!&r&7] Has &cdesactivado &7el fly. &c:("
+  fly_others_enabled: "&7[&6&l!&r&7] &aHas activado el fly a &d{player}&a."
+  fly_others_disabled: "&7[&6&l!&r&7] &cHas desactivado el fly a &d{player}&c."
+  fly_others_enabled_received: "&7[&6&l!&r&7] &d{player} &7te ha &aactivado &7el fly."
+  fly_others_disabled_received: "&7[&6&l!&r&7] &d{player} &7te ha &cdesactivado &7el fly."
+  fly_no_player: "&7[&6&l!&r&7] &cEl jugador &d{player} &cno se ha podido encontrar."
+
+# TabCompletionFilter - Si el "enabled" se pone en "false" esta sección no hará nada.
+# Si está activo, todos los comandos desaparecerán de la lista de comandos sugeridos y no se autocompletarán al pulsar TAB.
+# Exceptuando los comandos que estén en la whitelist.
+# Al añadir un comando todos los subcomandos de ese comando se añaden automáticamente.
+# Este filtro no afecta a los jugadores con OP o que tengan el permiso kirosutilities.tabcompletionfilter.exempt
+TabCompletionFilter:
+  enabled: true
+
+# Esta whitelist afectará a todos los jugadores a no ser que tengan OP, el permiso exempt o el permiso de una whitelist custom
+# donde "include_default" esté en "false".
+  default_whitelist:
+    - "spawn"
+    - "msg"
+    - "tell"
+    - "whisper"
+    - "spawnlist"
+    - "tpa"
+    - "tphere"
+    - "tpaccept"
+    - "tpdeny"
+    - "tpcancel"
+    - "tpignore"
+    - "tptoggle"
+    - "warp"
+    - "warps"
+    - "home"
+    - "homes"
+    - "back"
+
+
+# Aquí se pueden añadir permisos custom para ampliar o limitar más la whitelist para algunos jugadores.
+# Si "include_default" está en "true" los jugadores con este permiso se verán afectados por la whitelist default + la whitelist custom en concreto.
+# Si está en "false" solo se verán afectados por la whitelist custom.
+# Se pueden eliminar todas las whitelists cutom, dejando este apartado así "custom_whitelists: []"
+# También se pueden añadir tantas whitelists custom como se deseen.
+  custom_whitelists:
+
+    - permission: "kirosutilities.custom.staff"
+      commands:
+        - "ban"
+        - "kick"
+        - "warn"
+        - "mute"
+        - "tempban"
+        - "tempwarn"
+        - "tempmute"
+        - "unwarn"
+        - "history"
+        - "dupeip"
+        - "find"
+        - "server"
+        - "unban"
+        - "unmute"
+        - "warnings"
+        - "setspawn"
+      
+      include_default: true
+
+# Ajustes de los spawns
+# Permisos: kirosutilities.spawn.default - para poder teletransportarse al spawn "Default", kirosutilities.spawns.others - para poder
+# teletransportar a otros jugadores a los spawns especificados, kirosutilities.setspawn - para poder establecer spawns.
+# kirosutilities.spawnlist - para poder ver la lista de spawns con "/spawnlist"
+# Otros permisos pueden ser añadidos a la hora de establecer un spawn nuevo con la flag "--permission <permiso>"
+spawn:
+  enabled: true # Si se pone en "false" toda la mecánica de spawns se desactiva.
+  spawn_on_join: true # Fuerza a que los jugadores aparezcan en el spawn "Default" cuando se unen al servidor.
+  first_spawn: "Default" # Fuerza el spawn en el spawn especificado a los jugadores que se unen por 1a vez al servidor.
+   
+# Fin de la config.

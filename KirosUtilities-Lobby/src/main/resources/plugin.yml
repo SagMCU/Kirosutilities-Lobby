@@ -1,0 +1,64 @@
+name: KirosUtilities
+version: Lobby-2.0
+main: com.sagmcu.KirosUtilities.Main
+api-version: 1.13
+softdepend: [ProtocolLib]
+
+commands:
+  kirosutilities:
+    description: Reloads the plugin configuration
+    usage: /kirosutilities reload
+    permission: kirosutilities.admin
+    permission-message: "You do not have permission to use this command."
+  spawn:
+    description: Teleports to a spawn point
+    usage: /spawn [name] [player]
+    permission: kirosutilities.spawn.default
+    permission-message: "You do not have permission to use this command."
+  setspawn:
+    description: Sets a spawn point at the player's location
+    usage: /setspawn [--name <name>] [--permission <permission>]
+    permission: kirosutilities.setspawn
+    permission-message: "You do not have permission to use this command."
+  spawnlist:
+    description: Lists available spawn points
+    usage: /spawnlist
+    permission: kirosutilities.spawnlist
+    permission-message: "You do not have permission to use this command."
+  fly:
+    description: Toggles flight mode
+    usage: /fly [player]
+    permission: kirosutilities.fly
+    permission-message: "You do not have permission to use this command."
+
+permissions:
+  kirosutilities.admin:
+    description: Allows using the reload command.
+    default: op
+  kirosutilities.TabCompletionFilter.exempt:
+    description: Players with this permission are exempt from the TabCompletionFilter
+    default: op
+  kirosutilities.joinfullservers:
+    description: Allows players to join the server even when it is full
+    default: op
+  kirosutilities.spawn.default:
+    description: Allows teleporting to the default spawn
+    default: op
+  kirosutilities.spawns.others:
+    description: Allows teleporting other players to spawns
+    default: op
+  kirosutilities.setspawn:
+    description: Allows setting spawn points
+    default: op
+  kirosutilities.spawnlist:
+    description: Allows listing spawn points
+    default: op
+  kirosutilities.fly:
+    description: Allows toggling own flight mode
+    default: op
+  kirosutilities.fly.others:
+    description: Allows toggling flight mode for other players
+    default: op
+  kirosutilities.fly.persist:
+    description: Allows flight mode to persist across server joins
+    default: op
